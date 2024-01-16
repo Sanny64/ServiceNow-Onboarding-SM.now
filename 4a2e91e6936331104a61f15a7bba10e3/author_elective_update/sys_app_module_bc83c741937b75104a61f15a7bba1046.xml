@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="System Import Sets">import_sets</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>User Data Import</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_1138257_sm_now_o_user_data_import</name>
+        <order>1100</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-16 11:00:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bc83c741937b75104a61f15a7bba1046</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>User Data Import</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SM.now OnBoarding Application" source="x_1138257_sm_now_o">4a2e91e6936331104a61f15a7bba10e3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SM.now OnBoarding Application">4a2e91e6936331104a61f15a7bba10e3</sys_scope>
+        <sys_update_name>sys_app_module_bc83c741937b75104a61f15a7bba1046</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-16 11:00:07</sys_updated_on>
+        <timeline_page/>
+        <title>User Data Import</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="SM.now OnBoarding Application">4a2e91e6936331104a61f15a7bba10e3</application>
+        <file_path/>
+        <instance_id>55734ceadbdaf59002022a59139619d1</instance_id>
+        <instance_name>dev206468</instance_name>
+        <name>sys_app_module_bc83c741937b75104a61f15a7bba1046</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="System Import Sets">import_sets</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>User Data Import</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_1138257_sm_now_o_user_data_import</name><order>1100</order><override_menu_roles>false</override_menu_roles><query/><report/><roles/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-01-16 11:00:07</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>bc83c741937b75104a61f15a7bba1046</sys_id><sys_mod_count>0</sys_mod_count><sys_name>User Data Import</sys_name><sys_overrides/><sys_package display_value="SM.now OnBoarding Application" source="x_1138257_sm_now_o">4a2e91e6936331104a61f15a7bba10e3</sys_package><sys_policy/><sys_scope display_value="SM.now OnBoarding Application">4a2e91e6936331104a61f15a7bba10e3</sys_scope><sys_update_name>sys_app_module_bc83c741937b75104a61f15a7bba1046</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-01-16 11:00:07</sys_updated_on><timeline_page/><title>User Data Import</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>-95951204</payload_hash>
+        <record_name>User Data Import</record_name>
+        <reverted_from/>
+        <source>fb9206e393a3f1104a61f15a7bba1021</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-16 11:00:07</sys_created_on>
+        <sys_id>f883c741937b75104a61f15a7bba1048</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18d11edb3ed0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-16 11:00:07</sys_updated_on>
+        <type>Module</type>
+        <update_guid>3083c741c07b75101a16ba142dab4348</update_guid>
+        <update_guid_history>3083c741c07b75101a16ba142dab4348:-95951204</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="User Data Import">59b23305937f75104a61f15a7bba10bd</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-16 14:26:19</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>04ec865adf30416abd26ed6f7bd623c9</sys_id>
+        <sys_metadata>bc83c741937b75104a61f15a7bba1046</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>User Data Import</sys_name>
+        <sys_package display_value="SM.now OnBoarding Application" source="x_1138257_sm_now_o">4a2e91e6936331104a61f15a7bba10e3</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="SM.now OnBoarding Application">4a2e91e6936331104a61f15a7bba10e3</sys_scope>
+        <sys_scope_delete display_value="">84a234f5851b4550a03baed8c8fd8900</sys_scope_delete>
+        <sys_update_name>sys_app_module_bc83c741937b75104a61f15a7bba1046</sys_update_name>
+        <sys_update_version display_value="sys_app_module_bc83c741937b75104a61f15a7bba1046">f883c741937b75104a61f15a7bba1048</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-16 14:26:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

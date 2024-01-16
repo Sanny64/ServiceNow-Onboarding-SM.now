@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="DELETE">
+        <active>false</active>
+        <map display_value="Import User Data">7ed29f8193bb75104a61f15a7bba10e7</map>
+        <order>100</order>
+        <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+
+	// Assignment-Gruppe anlegen.
+	let group = new GlideRecord("sys_user_group");
+	group.initialize();
+	group.name = source.u_assignment_group;
+	group.insert();
+	gs.info("ausgabe" + source.u_assignment_group); 
+
+})(source, map, log, target);]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-16 12:13:02</sys_created_on>
+        <sys_id>d583dbc193bb75104a61f15a7bba1033</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>onStart</sys_name>
+        <sys_package display_value="SM.now OnBoarding Application" source="x_1138257_sm_now_o">4a2e91e6936331104a61f15a7bba10e3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SM.now OnBoarding Application">4a2e91e6936331104a61f15a7bba10e3</sys_scope>
+        <sys_update_name>sys_transform_script_d583dbc193bb75104a61f15a7bba1033</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-16 12:42:55</sys_updated_on>
+        <when>onStart</when>
+    </sys_transform_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="SM.now OnBoarding Application">4a2e91e6936331104a61f15a7bba10e3</application>
+        <file_path/>
+        <instance_id>55734ceadbdaf59002022a59139619d1</instance_id>
+        <instance_name>dev206468</instance_name>
+        <name>sys_transform_script_d583dbc193bb75104a61f15a7bba1033</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_transform_script"&gt;&lt;sys_transform_script action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;map display_value="Import User Data"&gt;7ed29f8193bb75104a61f15a7bba10e7&lt;/map&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+
+	// Assignment-Gruppe anlegen.
+	let group = new GlideRecord("sys_user_group");
+	group.initialize();
+	group.name = source.u_assignment_group;
+	group.insert();
+	gs.info("ausgabe" + source.u_assignment_group); 
+
+})(source, map, log, target);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_transform_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-01-16 12:13:02&lt;/sys_created_on&gt;&lt;sys_id&gt;d583dbc193bb75104a61f15a7bba1033&lt;/sys_id&gt;&lt;sys_mod_count&gt;9&lt;/sys_mod_count&gt;&lt;sys_name&gt;onStart&lt;/sys_name&gt;&lt;sys_package display_value="SM.now OnBoarding Application" source="x_1138257_sm_now_o"&gt;4a2e91e6936331104a61f15a7bba10e3&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="SM.now OnBoarding Application"&gt;4a2e91e6936331104a61f15a7bba10e3&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_transform_script_d583dbc193bb75104a61f15a7bba1033&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-01-16 12:42:55&lt;/sys_updated_on&gt;&lt;when&gt;onStart&lt;/when&gt;&lt;/sys_transform_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>678699410</payload_hash>
+        <record_name>onStart</record_name>
+        <reverted_from/>
+        <source>fb9206e393a3f1104a61f15a7bba1021</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-16 12:42:55</sys_created_on>
+        <sys_id>3e0b1fc993bb75104a61f15a7bba10e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18d124bd2b90000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-16 12:42:55</sys_updated_on>
+        <type>Transform Script</type>
+        <update_guid>f20b1fc989bb75100c21fefd07d9dfe8</update_guid>
+        <update_guid_history>f20b1fc989bb75100c21fefd07d9dfe8:678699410,4a591749dcbb751058a9dbfe27a2a457:568278105,69a89349bcbb75108ab7f9ea28a65088:-977634943,4628db09aebb751021ce2845eb5a3da2:1791172853,ff679309cdbb75109a8275a061526d00:-900088596,3ad6d7c507bb7510bbb015a6f5b7808e:-979149008,98265785bfbb7510f5e365c1ab3316be:626070904,7416534579bb7510811d7e63aa19a3e9:-860267646,c3f55bc19fbb75101f5ec537d6d94ff0:1597141781,0934d705b1bb75103162954be9dfb11c:-355349052</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-16 14:26:18</sys_created_on>
+        <sys_db_object display_value="" name="sys_transform_script">sys_transform_script</sys_db_object>
+        <sys_id>d2274ce57554443295f74336e851aac4</sys_id>
+        <sys_metadata>d583dbc193bb75104a61f15a7bba1033</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>onStart</sys_name>
+        <sys_package display_value="SM.now OnBoarding Application" source="x_1138257_sm_now_o">4a2e91e6936331104a61f15a7bba10e3</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="SM.now OnBoarding Application">4a2e91e6936331104a61f15a7bba10e3</sys_scope>
+        <sys_scope_delete display_value="">84a234f5851b4550a03baed8c8fd8900</sys_scope_delete>
+        <sys_update_name>sys_transform_script_d583dbc193bb75104a61f15a7bba1033</sys_update_name>
+        <sys_update_version display_value="sys_transform_script_d583dbc193bb75104a61f15a7bba1033">3e0b1fc993bb75104a61f15a7bba10e8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-16 14:26:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
