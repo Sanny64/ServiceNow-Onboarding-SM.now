@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list action="DELETE" parent="" relationship="" sys_domain="global" table="x_snc_devtools_user_data_import" version="2" view="">
+        <sys_ui_list action="DELETE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_snc_devtools_user_data_import</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by/>
+            <sys_created_on/>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path/>
+            <sys_id>088ab34d937f75104a61f15a7bba1075</sys_id>
+            <sys_mod_count/>
+            <sys_name>x_snc_devtools_user_data_import</sys_name>
+            <sys_package display_value="DevTools" source="x_snc_devtools">d689f6901bd38450a89720a8ec4bcbfd</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DevTools">d689f6901bd38450a89720a8ec4bcbfd</sys_scope>
+            <sys_update_name/>
+            <sys_updated_by/>
+            <sys_updated_on>2024-01-23 14:02:02</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="DevTools">d689f6901bd38450a89720a8ec4bcbfd</application>
+        <file_path/>
+        <instance_id>55734ceadbdaf59002022a59139619d1</instance_id>
+        <instance_name>dev206468</instance_name>
+        <name>sys_ui_list_x_snc_devtools_user_data_import_null</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_list parent="" relationship="" sys_domain="global" table="x_snc_devtools_user_data_import" version="2" view=""><sys_ui_list action="DELETE"><average_value>false</average_value><element/><max_value>false</max_value><min_value>false</min_value><name>x_snc_devtools_user_data_import</name><parent/><position/><relationship/><sum>false</sum><sys_class_name>sys_ui_list</sys_class_name><sys_created_by/><sys_created_on/><sys_domain>global</sys_domain><sys_domain_path/><sys_id>088ab34d937f75104a61f15a7bba1075</sys_id><sys_mod_count/><sys_name>x_snc_devtools_user_data_import</sys_name><sys_package display_value="DevTools" source="x_snc_devtools">d689f6901bd38450a89720a8ec4bcbfd</sys_package><sys_policy/><sys_scope display_value="DevTools">d689f6901bd38450a89720a8ec4bcbfd</sys_scope><sys_update_name/><sys_updated_by/><sys_updated_on>2024-01-23 14:02:02</sys_updated_on><sys_user/><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_list></sys_ui_list></record_update>]]></payload>
+        <payload_hash>-1867828973</payload_hash>
+        <record_name>x_snc_devtools_user_data_import</record_name>
+        <reverted_from/>
+        <source>fb9206e393a3f1104a61f15a7bba1021</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-23 14:02:02</sys_created_on>
+        <sys_id>8e403bd393b331104a61f15a7bba1021</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18d36a0c54b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-23 14:02:02</sys_updated_on>
+        <type>List Layout</type>
+        <update_guid>c2403bd32cb331107f64fe691419e921</update_guid>
+        <update_guid_history>c2403bd32cb331107f64fe691419e921:-1867828973</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-01-23 14:06:48</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_list">sys_ui_list</sys_db_object>
+        <sys_id>2d363bff8c1841808c81b15a66b43100</sys_id>
+        <sys_metadata>fb50bbd393b331104a61f15a7bba1080</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_devtools_user_data_import</sys_name>
+        <sys_package display_value="SM.now OnBoarding Application" source="x_1138257_sm_now_o">4a2e91e6936331104a61f15a7bba10e3</sys_package>
+        <sys_parent display_value="">6f50bbd393b331104a61f15a7bba103e</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="SM.now OnBoarding Application">4a2e91e6936331104a61f15a7bba10e3</sys_scope>
+        <sys_scope_delete display_value="">84a234f5851b4550a03baed8c8fd8900</sys_scope_delete>
+        <sys_update_name>sys_ui_list_x_snc_devtools_user_data_import_null</sys_update_name>
+        <sys_update_version display_value="sys_ui_list_x_snc_devtools_user_data_import_null">8e403bd393b331104a61f15a7bba1021</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-01-23 14:06:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
