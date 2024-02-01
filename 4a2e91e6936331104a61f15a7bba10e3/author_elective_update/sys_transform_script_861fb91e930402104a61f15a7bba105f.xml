@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="DELETE">
+        <active>true</active>
+        <map display_value="Group Data">c06da75b937331104a61f15a7bba1002</map>
+        <order>100</order>
+        <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onAfter*/ ) {
+
+    // Add your code here
+    // get the user
+    var user = new GlideRecord('sys_user');
+    user.get('user_name', source.u_username__cid_.toString());
+
+    // get the assignment group
+    var group = new GlideRecord('sys_group');
+    group.get('name', source.u_assignmentgroup.toString());
+    // Note: You are overwriting the 'group' variable here, consider using a separate variable for u_personagroup
+
+    // insert group membership for u_assignmentgroup
+    var grMemberAssignment = new GlideRecord('sys_user_grmember');
+    grMemberAssignment.initialize();
+    grMemberAssignment.user = user.sys_id;
+    grMemberAssignment.group = group.sys_id;
+    grMemberAssignment.insert();
+
+    // get the persona group
+    var personaGroup = new GlideRecord('sys_group');
+    personaGroup.get('name', source.u_personagroup.toString());
+
+    // insert group membership for u_personagroup
+    var grMemberPersona = new GlideRecord('sys_user_grmember');
+    grMemberPersona.initialize();
+    grMemberPersona.user = user.sys_id;
+    grMemberPersona.group = personaGroup.sys_id;
+    grMemberPersona.insert();
+
+})(source, map, log, target);
+]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 13:29:37</sys_created_on>
+        <sys_id>861fb91e930402104a61f15a7bba105f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>onAfter</sys_name>
+        <sys_package display_value="SM.now OnBoarding Application" source="x_1138257_sm_now_o">4a2e91e6936331104a61f15a7bba10e3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SM.now OnBoarding Application">4a2e91e6936331104a61f15a7bba10e3</sys_scope>
+        <sys_update_name>sys_transform_script_861fb91e930402104a61f15a7bba105f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 13:29:47</sys_updated_on>
+        <when>onAfter</when>
+    </sys_transform_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="SM.now OnBoarding Application">4a2e91e6936331104a61f15a7bba10e3</application>
+        <file_path/>
+        <instance_id>55734ceadbdaf59002022a59139619d1</instance_id>
+        <instance_name>dev206468</instance_name>
+        <name>sys_transform_script_861fb91e930402104a61f15a7bba105f</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_transform_script"&gt;&lt;sys_transform_script action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;map display_value="Group Data"&gt;c06da75b937331104a61f15a7bba1002&lt;/map&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[(function runTransformScript(source, map, log, target /*undefined onAfter*/ ) {
+
+    // Add your code here
+    // get the user
+    var user = new GlideRecord('sys_user');
+    user.get('user_name', source.u_username__cid_.toString());
+
+    // get the assignment group
+    var group = new GlideRecord('sys_group');
+    group.get('name', source.u_assignmentgroup.toString());
+    // Note: You are overwriting the 'group' variable here, consider using a separate variable for u_personagroup
+
+    // insert group membership for u_assignmentgroup
+    var grMemberAssignment = new GlideRecord('sys_user_grmember');
+    grMemberAssignment.initialize();
+    grMemberAssignment.user = user.sys_id;
+    grMemberAssignment.group = group.sys_id;
+    grMemberAssignment.insert();
+
+    // get the persona group
+    var personaGroup = new GlideRecord('sys_group');
+    personaGroup.get('name', source.u_personagroup.toString());
+
+    // insert group membership for u_personagroup
+    var grMemberPersona = new GlideRecord('sys_user_grmember');
+    grMemberPersona.initialize();
+    grMemberPersona.user = user.sys_id;
+    grMemberPersona.group = personaGroup.sys_id;
+    grMemberPersona.insert();
+
+})(source, map, log, target);
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_transform_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-02-01 13:29:37&lt;/sys_created_on&gt;&lt;sys_id&gt;861fb91e930402104a61f15a7bba105f&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;onAfter&lt;/sys_name&gt;&lt;sys_package display_value="SM.now OnBoarding Application" source="x_1138257_sm_now_o"&gt;4a2e91e6936331104a61f15a7bba10e3&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="SM.now OnBoarding Application"&gt;4a2e91e6936331104a61f15a7bba10e3&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_transform_script_861fb91e930402104a61f15a7bba105f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-02-01 13:29:47&lt;/sys_updated_on&gt;&lt;when&gt;onAfter&lt;/when&gt;&lt;/sys_transform_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>917767267</payload_hash>
+        <record_name>onAfter</record_name>
+        <reverted_from/>
+        <source>fb9206e393a3f1104a61f15a7bba1021</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 13:29:47</sys_created_on>
+        <sys_id>513f359e930402104a61f15a7bba103d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18d64dc79bb0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 13:29:47</sys_updated_on>
+        <type>Transform Script</type>
+        <update_guid>193f359eb2040210617098279c47283c</update_guid>
+        <update_guid_history>193f359eb2040210617098279c47283c:917767267,7e2f791e5f0402107e972c1719363be9:-1851040529</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-01 13:54:38</sys_created_on>
+        <sys_db_object display_value="" name="sys_transform_script">sys_transform_script</sys_db_object>
+        <sys_id>e1543e5791864820b97a734f9c3b5590</sys_id>
+        <sys_metadata>861fb91e930402104a61f15a7bba105f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>onAfter</sys_name>
+        <sys_package display_value="SM.now OnBoarding Application" source="x_1138257_sm_now_o">4a2e91e6936331104a61f15a7bba10e3</sys_package>
+        <sys_parent display_value="Group Data">c06da75b937331104a61f15a7bba1002</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="SM.now OnBoarding Application">4a2e91e6936331104a61f15a7bba10e3</sys_scope>
+        <sys_scope_delete display_value="">84a234f5851b4550a03baed8c8fd8900</sys_scope_delete>
+        <sys_update_name>sys_transform_script_861fb91e930402104a61f15a7bba105f</sys_update_name>
+        <sys_update_version display_value="sys_transform_script_861fb91e930402104a61f15a7bba105f">513f359e930402104a61f15a7bba103d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-01 13:54:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
