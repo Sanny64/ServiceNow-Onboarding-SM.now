@@ -2,26 +2,45 @@
     <sys_transform_script action="INSERT_OR_UPDATE">
         <active>true</active>
         <map display_value="User Data ">8ceca3df937331104a61f15a7bba10f5</map>
-        <order>100</order>
+        <order>200</order>
         <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onAfter*/ ) {
 	
 	// Add your code here
 	// get the user
     var user = new GlideRecord('sys_user');
     user.addQuery('user_name',source.u_username__cid_.toString());
-	user.query(); 
+	user.query();
 	if(!user.hasNext()) 
 		return;
 	user.next();
 	
-	// get the assignment group
-    var assignmentgroup = new GlideRecord('sys_user_group');
-    assignmentgroup.addQuery('name',source.u_user_group.toString());
-	assignmentgroup.query();
-	if(!assignmentgroup.hasNext()) 
+	let userGroup = source.u_user_group.toString();
+	let propertyName = "PERSONA.";
+	if (!userGroup) return;
+	
+	propertyName += userGroup.toString();
+	
+	// check if there already is a set property name in the "connection"-table of "assignme_connection"
+	let check = new GlideRecord('x_1138257_assignme_connection');
+	check.addQuery("name", propertyName);
+	check.query();
+	
+	// if it has a propertyname already the function ends
+	if(!check.hasNext())
 		return;
-	assignmentgroup.next();
-	insertUser(user, assignmentgroup);
+	check.next();
+	
+	let personaGroupId = JSON.parse(check.json);
+	personaGroupId = personaGroupId.personaGroups[0];
+	
+	// get the persona group
+	var personagroup = new GlideRecord('sys_user_group');
+    personagroup.addQuery('sys_id', personaGroupId.toString());
+	personagroup.query();
+	if(!personagroup.hasNext()) 
+		return;
+	personagroup.next();
+	insertUser(user, personagroup);
 	
 	function insertUser(user, group) {
 		
@@ -31,21 +50,22 @@
 		grMember.user = user.sys_id;
 		grMember.group = group.sys_id;
 		grMember.insert();
-	
-	} 
+
+	}
+	//curent state of being: this script creates an empty user in the targeted persona group.
 })(source, map, log, target);]]></script>
         <sys_class_name>sys_transform_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2024-02-01 16:34:31</sys_created_on>
-        <sys_id>7479ea1e93c402104a61f15a7bba1049</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_created_on>2024-02-05 14:41:41</sys_created_on>
+        <sys_id>bcb37eaf93c002104a61f15a7bba1021</sys_id>
+        <sys_mod_count>45</sys_mod_count>
         <sys_name>onAfter</sys_name>
         <sys_package display_value="SM.now OnBoarding Application" source="x_1138257_sm_now_o">4a2e91e6936331104a61f15a7bba10e3</sys_package>
         <sys_policy/>
         <sys_scope display_value="SM.now OnBoarding Application">4a2e91e6936331104a61f15a7bba10e3</sys_scope>
-        <sys_update_name>sys_transform_script_7479ea1e93c402104a61f15a7bba1049</sys_update_name>
+        <sys_update_name>sys_transform_script_bcb37eaf93c002104a61f15a7bba1021</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2024-02-06 16:08:42</sys_updated_on>
+        <sys_updated_on>2024-02-07 11:04:11</sys_updated_on>
         <when>onAfter</when>
     </sys_transform_script>
 </record_update>

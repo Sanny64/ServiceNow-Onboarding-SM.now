@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <map display_value="Group Data">c06da75b937331104a61f15a7bba1002</map>
+        <order>100</order>
+        <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onAfter*/ ) {
+	
+	// Add your code here
+	// add "PERSONA"-tag to mark assignment group as connected to an persona group
+	const propertyName = 'PERSONA.' + source.u_assignment_group;
+	
+	// check if there already is a set property name in the "connection"-table of "assignme_connection"
+	let check = new GlideRecord('x_1138257_assignme_connection');
+	check.addQuery("name", propertyName);
+	check.query();
+	
+	// if it has a propertyname already the function returns and skips to the next part of the code.
+	if(check.hasNext())
+		return;
+	
+	// query the sys_user_group table to get information about the persona group
+	let personagroup = new GlideRecord('sys_user_group');
+    personagroup.addQuery('name',source.u_persona_group.toString());
+	personagroup.query(); 
+	personagroup.next();
+	
+	// get the sys_id of the persona group
+	const personaId = personagroup.sys_id.toString();
+	
+	// create an object with personaGroups array containing the personaId
+	let propertyObj = {
+	"personaGroups": [personaId]
+	};
+	
+	// inserts values of assignment and persona group into "connection"-table of "assignme_connection"
+	let property = new GlideRecord ('x_1138257_assignme_connection');
+	property.initialize();
+	property.setValue ('name', propertyName);
+	property.setValue ('json', JSON.stringify(propertyObj));
+	property.insert(); 
+	
+})(source, map, log, target);]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-02-02 13:15:13</sys_created_on>
+        <sys_id>4e81cba6934002104a61f15a7bba1056</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>onAfter</sys_name>
+        <sys_package display_value="SM.now OnBoarding Application" source="x_1138257_sm_now_o">4a2e91e6936331104a61f15a7bba10e3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SM.now OnBoarding Application">4a2e91e6936331104a61f15a7bba10e3</sys_scope>
+        <sys_update_name>sys_transform_script_4e81cba6934002104a61f15a7bba1056</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-02-06 16:10:51</sys_updated_on>
+        <when>onAfter</when>
+    </sys_transform_script>
+</record_update>
